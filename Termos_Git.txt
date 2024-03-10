@@ -30,15 +30,25 @@ ela não é utitlizada, por isso fazemos essa troca para a branch main
     git config --global init.defaultBranch main:
     Comando que ao executado, define a branch padrão para futuras inicializações de repositório como "main".
 
-git remote add origin "url do repositório remoto":
+git remote add apelido "url do repositório remoto":
 É a partir desse comando que começamos a linkar o repositório local com o remoto. Após criar um repositório no
 Github, basta copiar a url disponibilizada e colar entre as aspas desse comando, isso irá indicar para o git qual 
 é a referencia remota daquele repositório local. O remoto é oque permite a acessibilidade do código salvo em qualquer
 outra máquina.
+    
+    git remote -v:
+    Exibe a url do repositório remoto na qual o git esta sincronizado, caso execute esse comando sem adicionar nenhum repositório
+    remoto, nada sera exibido.
+    
+    git remote remove apelido:
+    Serve para remover um repositório remoto espeficico
 
-git remote -v:
-Exibe a url do repositório remoto na qual o git esta sincronizado, caso execute esse comando sem adicionar nenhum repositório
-remoto, nada sera exibido.
+    git remote set-url apelido "url":
+    Utilizado para realizar a atualização na url do repositório remoto se caso necessário.
+
+    git remote rename apelido "novo-apelido":
+    Caso deseje renomear o apelido de um repositório rmeoto.
+
 
 git status:
 Comando que informa na tela qual o status atual do repositório, no caso em qual estágio se encontra os arquivos nele presentes.
@@ -66,3 +76,6 @@ que foi aleterado.
 git push origin main:
 Por fim, este comando sobe os commits realizados para repositórios remoto entrando no fluxo de Remote Repository.
 
+git clone "url":
+Com esse comando é possivel clonar o repositório remoto em um diretório local em uma maquina diferente, tornando possivel o acesso direto de outro diretório
+local.
