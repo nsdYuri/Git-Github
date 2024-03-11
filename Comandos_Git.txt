@@ -27,7 +27,7 @@ git branch -M main:
 Esse comando irá criar uma branch (ramificação) chamada main, que normalmente é a branch principal
 utilzada em projetos, é nela onde se tem o costume de guardar o código do projeto final.
 É necessário executarmos esse comando porque por padrão o git inicializa criando uma branch chamada (master)
-ela não é utitlizada, por isso fazemos essa troca para a branch main 
+ela não é utitlizada, por isso fazemos essa troca para a branch main. 
 
     git config --global init.defaultBranch main:
     Comando que ao executado, define a branch padrão para futuras inicializações de repositório como "main".
@@ -43,7 +43,7 @@ outra máquina.
     remoto, nada sera exibido.
     
     git remote remove apelido(origin):
-    Serve para remover um repositório remoto espeficico
+    Serve para remover um repositório remoto espeficico.
 
     git remote set-url apelido(origin) "url":
     Utilizado para realizar a atualização na url do repositório remoto se caso necessário.
@@ -55,10 +55,10 @@ outra máquina.
 git status:
 Comando que informa na tela qual o status atual do repositório, no caso em qual estágio se encontra os arquivos nele presentes.
 Para se entender os estágios é necessário ter noção do fluxo de versionamento do git.
-    1° Work Directory - É quando os arquivos são modificados, excluidos ou adicionados
-    2° Staging Area - Etapa onde são adicionados os arquivos preparados para o versionamento
-    3° Repository - Arquivos salvos
-    4° Remote Repository - Após os arquivos subirem para o repositório remoto
+    1° Work Directory - É quando os arquivos são modificados, excluidos ou adicionados.
+    2° Staging Area - Etapa onde são adicionados os arquivos preparados para o versionamento.
+    3° Repository - Arquivos salvos.
+    4° Remote Repository - Após os arquivos subirem para o repositório remoto.
 Os estágios são:
 Nothing to commit - É o quando não há nennhuma alteração identificada 
 Untracked files - Um estágio antes de serem adicionados, é quando algum arquivo é modificado, excluido ou adicionado.
@@ -68,7 +68,7 @@ Commit - É a mensagem incluida para registrar oque foi modificado naquela vers�
 git add "nome do arquivo.seu formato":
 É o comando que adiciona os arquivos para a Stanging Area, nesse momento o sistema informa que existem mudanças para
 serem commitadas (Changes to be committed). Caso for preciso adiconar mais de um arquivo, basta incluir um ponto após 
-o add (git add .) 
+o add (git add .).
 
 git commit -m "mensagem do commit":
 É utilizado para reazliar o famoso commit, salvando as alterações e indo para a parte Repository do fluxo. Fazendo com que o sistema volte 
@@ -85,12 +85,20 @@ que foi aleterado.
 
     git reset --hard "id commit anterior ao que se deseja apagar":
     Apaga o commit seguinte ao referenciado pelo id, basicamente esse comando reseta o código até o ultimo commit anterior ao que vai ser apagado, lite-
-    ralmente o ignorando 
+    ralmente o ignorando.
 
 
 git log:
 Exibe na tela todos os commits realizados naquele repositório, nesse histórico é possivel ver o id dos commits, eles são necessários caso seja preciso
 reverter algum deles.
+
+    git log --oneline:
+    Apresenta um log mais uniforme, de maneira bem mais resumida, apenas exibindo o inicio do hash(id) e a mensagem de cada commit.
+
+    git log -p:
+    Nesse caso serpa exibido um log muito mais detalhado, trazendo as diff(diferenças) e até mesmo oque foi alterado.
+
+    git log --graph
 
 git push origin main:
 Por fim, este comando sobe os commits realizados para repositórios remoto entrando no fluxo de Remote Repository.
