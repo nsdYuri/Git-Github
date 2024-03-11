@@ -3,3 +3,12 @@ O que é o Git?
 de seus códigos através do próprio computador e sincronizar as mudanças e alterações para
 um servidor remotamente. Isso possibilita o desenvolvimento coletivo entre programadores em
 um repositório único sem que um atrapalhe o outro.
+
+.gitignore:
+Começa com ponto pois é um arquivo oculto. Quando incializamos o git em um diretório, todos as
+pastas e arquivos serão rastradas pelo git e entraram no controle de versionamento, existem situações
+em que não é necessário que certas pastas ou arquivos sejam versionados ou até mesmo subam para um repositório
+remoto. Pensando nisso, o arquivo ".gitignore" serve para informarmos tudo aquilo que queremos que o Git ignore.
+Através do site "gitignore.io" é possivel informar a linguagem de desenvolvimento e o sistema gera automaticamente
+um exemplo de gitignore para um projeto com aquela respectiva linguagem.
+
