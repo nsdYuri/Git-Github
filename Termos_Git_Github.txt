@@ -12,3 +12,10 @@ remoto. Pensando nisso, o arquivo ".gitignore" serve para informarmos tudo aquil
 Através do site "gitignore.io" é possivel informar a linguagem de desenvolvimento e o sistema gera automaticamente
 um exemplo de gitignore para um projeto com aquela respectiva linguagem.
 
+README.md:
+O README é um arquivo com extensão .md, ou seja, ele é escrito em Markdown que é uma linguagem de marcação utilizada 
+para converter o texto em um HTML válido. A função desse arquivo é apresentar informações do projeto, como: Descrição 
+do seu projeto, Funcionalidades, Como os usuários podem utilizá-lo, Onde os usuários podem encontrar ajuda sobre seu projeto,
+Autores do projeto. É legal documentar o projeto para quem for visitar seu repositório saiba do que se trata.
+
+
