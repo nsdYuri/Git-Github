@@ -1,0 +1,5 @@
+O que é o Git?
+É um sisetma de controle de versão. Permitindo com que os programadores controlem a versão
+de seus códigos através do próprio computador e sincronizar as mudanças e alterações para
+um servidor remotamente. Isso possibilita o desenvolvimento coletivo entre programadores em
+um repositório único sem que um atrapalhe o outro.
