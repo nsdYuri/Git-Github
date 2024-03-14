@@ -1,13 +1,13 @@
 Comandos Git
 
-git config --global user.name "nome":
+git config --global user.name "{nome}":
 Comando que armazena nas configurações do git o nome do usuário que está operando naquele repositório
 '--global' serve para a maquina salvar que toda vez que o git for aberto, sera o mesmo usuario.
 
     git config user.name:
     Exibe na tela o nome do usuário 
 
-git config --global.user.emal "email":
+git config --global.user.emal "{email}":
 Comando que armazena nas configurações do git o email do usuário que está operando naquele repositório
 '--global' serve para a maquina salvar que toda vez que o git for aberto, sera o mesmo usuario.
 
@@ -32,7 +32,7 @@ ela não é utitlizada, por isso fazemos essa troca para a branch main.
     git config --global init.defaultBranch main:
     Comando que ao executado, define a branch padrão para futuras inicializações de repositório como "main".
 
-git remote add apelido(origin) "url do repositório remoto":
+git remote add apelido(origin) {url do repositório remoto}:
 É a partir desse comando que começamos a linkar o repositório local com o remoto. Após criar um repositório no
 Github, basta copiar a url disponibilizada e colar entre as aspas desse comando, isso irá indicar para o git qual 
 é a referencia remota daquele repositório local. O remoto é oque permite a acessibilidade do código salvo em qualquer
@@ -45,10 +45,10 @@ outra máquina.
     git remote remove apelido(origin):
     Serve para remover um repositório remoto espeficico.
 
-    git remote set-url apelido(origin) "url":
+    git remote set-url apelido(origin) {url}:
     Utilizado para realizar a atualização na url do repositório remoto se caso necessário.
 
-    git remote rename apelido(origin) "novo-apelido":
+    git remote rename apelido(origin) {novo-apelido}:
     Caso deseje renomear o apelido de um repositório rmeoto.
 
 
@@ -65,25 +65,36 @@ Untracked files - Um estágio antes de serem adicionados, é quando algum arquiv
 Changes to be committed - Quando o arquivo é adicionado e está pronto pra ser commitado.
 Commit - É a mensagem incluida para registrar oque foi modificado naquela versão do arquivo.
 
-git add "nome do arquivo.seu formato":
+    git diff:
+    Apresenta as alterações realizadas no arquivo entre um commit até o momento na qual foi executado o git diff.
+
+    git diff {hash_commit_1..hash_commit_2}:
+    Esse comando exibe a diferença entre dois commit espeficicos, apresentando tudo aquilo que foi alterado no arquivo.
+
+    git diff {hash_commit_partida}:
+    Basicamente esse comando pega o commit na qual o hash se refencia e exibe as diferenças com o HEAD(commit mais atual),
+    mostrando todas as atualizações.
+
+
+git add {nome do arquivo.seu formato}:
 É o comando que adiciona os arquivos para a Stanging Area, nesse momento o sistema informa que existem mudanças para
 serem commitadas (Changes to be committed). Caso for preciso adiconar mais de um arquivo, basta incluir um ponto após 
 o add (git add .).
 
-git commit -m "mensagem do commit":
+git commit -m "{mensagem do commit}":
 É utilizado para reazliar o famoso commit, salvando as alterações e indo para a parte Repository do fluxo. Fazendo com que o sistema volte 
 para o estágio de Nothing to commit depois dessa ação, basicamente salva as alterações realizadas com uma mensagem que normalmente indica aquilo 
 que foi aleterado.
 
-    git commit --amend -m "mensagem correta"
+    git commit --amend -m "{mensagem correta}"
     Serve para alterar o nome do commit mais recente realizado. O parametro --amend indica ao Git que não é um novo commit, e sim apenas uma alteração
     na mensagem.
 
-    git revert "id commit":
+    git revert {id commit}:
     Realiza a reversão das mudanças estabelecidas no commit ferente ao id indicado. Assim que essa reversão é feita, é gerado mais um commit em cima 
     daquele que foi desfeito.
 
-    git reset --hard "id commit anterior ao que se deseja apagar":
+    git reset --hard {id commit anterior ao que se deseja apagar}:
     Apaga o commit seguinte ao referenciado pelo id, basicamente esse comando reseta o código até o ultimo commit anterior ao que vai ser apagado, lite-
     ralmente o ignorando.
 
@@ -96,14 +107,17 @@ reverter algum deles.
     Apresenta um log mais uniforme, de maneira bem mais resumida, apenas exibindo o inicio do hash(id) e a mensagem de cada commit.
 
     git log -p:
-    Nesse caso serpa exibido um log muito mais detalhado, trazendo as diff(diferenças) e até mesmo oque foi alterado.
+    Nesse caso sera exibido um log muito mais detalhado, trazendo as diff(diferenças) e até mesmo oque foi alterado.
+
+        git show "hash do commit":
+        exibe os mesmos detalhes do git log -p porem dessa vez de um commit em espeficico apenas.
 
     git log --graph
 
 git push origin main:
 Por fim, este comando sobe os commits realizados para repositórios remoto entrando no fluxo de Remote Repository.
 
-git clone "url":
+git clone {url}:
 Com esse comando é possivel clonar o repositório remoto em um diretório local em uma maquina diferente, tornando possivel o acesso direto de outro diretório
 local.
 
@@ -112,4 +126,29 @@ Comando usado para buscar e baixar conteúdo de repositórios remotos e fazer a 
 Isso é necessário quando outro desenvolvedor fez alterações e subiu elas no repositório remoto, quando quisermos desenvolver nossa parte e precisamos da versão
 mais atualizada do projeto o pull atualiza nosso repositório local com as novas alterações feitas no remoto.
 
+git branch:
+Exibe as ramificações existentes no projeto.
+
+    git branch {nome da branch}:
+    Cria uma nova branch com o nome fornecido.
+
+    git checkout {nome da branch}: -- COMANDO ANTIGO
+    Altera o HEAD para a branch especificada.
+
+    git swi
+
+    git branch -m {nome antigo} {nome novo}:
+    Comando que renomeia o nome da branch.
+
+    git switch -c {nome da branch}:
+    É a nova versao do git checkout, nesse caso ele cria e também ja faz a alteração entre branchs quando for executado
+
+    git branch -d {nome da branch}:
+    Comando que remove uma branch. OBS: Só é possivel apagar uma branch quando estamos dentro dela no momento.
+
+
+
 git merge
+
+git "comando" --help:
+Abre uma documentação de ajuda sobre o comando que deseja saber.

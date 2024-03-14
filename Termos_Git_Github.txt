@@ -18,4 +18,14 @@ para converter o texto em um HTML válido. A função desse arquivo é apresenta
 do seu projeto, Funcionalidades, Como os usuários podem utilizá-lo, Onde os usuários podem encontrar ajuda sobre seu projeto,
 Autores do projeto. É legal documentar o projeto para quem for visitar seu repositório saiba do que se trata.
 
+HEAD:
+Sera muito visto no terminal, principalmente quando executamos o comando git log, HEAD indica a fase atual do projeto, então logo
+após o hash do commit, o git ira informar com esse apelido HEAD, na qual commit se encontra o projeto.
+
+Branch:
+Nada mais nada menos que uma ramificação, essencial para tornar o trabalho simultanêo entre membros da mesma equipe mais facil. 
+Esse conceito consiste em criar uma "cópia" do projeto onde nela o desenvolvedor consegue fazer teste, criar novas Funcionalidades e etc
+sem que comprometa o projeto final ou atrapalhe outra pessoa atuando no mesmo projeto. Dessa maneira, com cada um tendo sua branch, é mais
+eficiente para equipe pois está cada um fazendo oque deve em sua determinada ramificação e ao final do projeto apenas juntam tudo na versão
+final principal(main).
 
